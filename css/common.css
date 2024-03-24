@@ -61,7 +61,7 @@ li {
   height: 40px;
 
   border: 1.5px solid #808080;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 6px 12px;
 }
 
@@ -80,7 +80,7 @@ li {
   height: 40px;
 
   border: 1.5px solid #808080;
-  border-radius: 5px;
+  border-radius: 8px;
 
   padding: 0 12px;
 }
@@ -112,7 +112,7 @@ li {
 
 .login-form label input,
 .login-form label input:active {
-  border-radius: 5px;
+  border-radius: 8px;
   border: 1.5px solid #808080;
 
   height: 40px;
@@ -172,7 +172,64 @@ li {
 
 /* ---------------- task(6) -------------------- */
 
+#boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 16px;
+
+  padding: 32px;
+  background: #f6f6fe;
+}
+
 #controls {
   display: flex;
   gap: 16px;
+
+  padding: 32px;
+  background: #f6f6fe;
+
+  margin-bottom: 16px;
+}
+
+#controls input {
+  border: 1px solid #808080;
+  border-radius: 8px;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+
+  background: #f6f6fe;
+}
+
+button[data-create],
+button[data-destroy] {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 120px;
+  height: 40px;
+
+  border: none;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+button[data-create] {
+  background-color: #4e75ff;
+}
+button[data-destroy] {
+  background-color: #ff4e4e;
+}
+
+button[data-create]:hover,
+button[data-create]:focus {
+  background-color: #6c8cff;
+}
+button[data-destroy]:hover,
+button[data-destroy]:focus {
+  background-color: #ff7070;
 }
