@@ -9,16 +9,14 @@ const destroyButton = document.querySelector("button[data-destroy]");
 const boxes = document.querySelector("#boxes");
 const input = document.querySelector("#controls").querySelector("input");
 
-let boxList = [];
-
 createButton.addEventListener("click", (e) => {
-  destroyBoxes();
+  boxes.innerHTML = "";
   const num = input.value;
   createBoxes(num);
 });
 
 destroyButton.addEventListener("click", (e) => {
-  destroyBoxes();
+  boxes.innerHTML = "";
 });
 
 function createBoxes(amount) {
@@ -28,21 +26,12 @@ function createBoxes(amount) {
 
       boxElement.style.backgroundColor = getRandomHexColor();
       boxElement.textContent = " ";
-      boxElement.style.width = (30 + 10 * index).toString() + "px";
-      boxElement.style.height = (30 + 10 * index).toString() + "px";
+      boxElement.style.width = 30 + 10 * index + "px";
+      boxElement.style.height = 30 + 10 * index + "px";
 
       boxes.append(boxElement);
     }
   } else {
     alert("Choose the number from 1 to a 100");
-  }
-}
-
-function destroyBoxes() {
-  boxList = boxes.childNodes;
-  while (boxes.childNodes.length > 0) {
-    boxList.forEach((element) => {
-      element.remove();
-    });
   }
 }

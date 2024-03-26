@@ -14,16 +14,10 @@ const images = [
 ];
 
 const gallery = document.querySelector(".gallery");
+let listCode = "";
 
 images.forEach((element) => {
-  const ll = document.createElement("li");
-  const pict = document.createElement("img");
-
-  pict.setAttribute("src", element.url);
-  pict.setAttribute("alt", element.alt);
-  pict.setAttribute("width", "360px");
-  pict.setAttribute("height", "300px");
-
-  gallery.append(ll);
-  ll.append(pict);
+  listCode += `<li><img src=${element.url} alt=${element.alt} width="360" height="300"></li>`;
 });
+
+gallery.innerHTML = listCode;
